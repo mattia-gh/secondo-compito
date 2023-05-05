@@ -13,7 +13,7 @@ $_SESSION['spesaFinora']=0;
 $outputTable="<h3>Gentile cliente ";
 $outputTable.= $_SESSION['userName'];
 
-if (!$_SESSION['carrello']) {
+if (empty($_SESSION['carrello'])) {
    $outputTable.= " che ci fai qui con un carrello vuoto?\n";
 } else {
     $_SESSION['accessoDaPaga']=1;
@@ -74,15 +74,15 @@ if (!$_SESSION['carrello']) {
        }
        if (isset($row2)) {
          $aux='quantita' .$row2['tipoSnowboard'];
-         $prezz=$row2['costoSci']*$_SESSION[$aux];
+         $prezz=$row2['costoSnowboard']*$_SESSION[$aux];
        }
        if (isset($row3)) {
          $aux='quantita' .$row3['tipoScarponi'];
-         $prezz=$row3['costoSci']*$_SESSION[$aux];
+         $prezz=$row3['costoScarponi']*$_SESSION[$aux];
        }
        if (isset($row4)) {
-         $aux='quantita' .$row4['tipoSci'];
-         $prezz=$row4['costoSci']*$_SESSION[$aux];
+         $aux='quantita' .$row4['tipoCasco'];
+         $prezz=$row4['costoCasco']*$_SESSION[$aux];
        }
        $outputTable.= $prezz;
        $outputTable.=")</td>\n</tr>\n";
@@ -107,21 +107,23 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 </head>
 
 <body>
- <table style="color: black; background: lime;" border="1">
-  <tr>
-    <td width="20%"><a href="pagina_iniziale.php" alt="aa">HOME PAGE</a></td>
-    <td width="20%"><a href="mysql.sci.php" alt="aa">SCI</a></td>
-    <td width="20%"><a href="mysql.snowboard.php" alt="aa">SNOWBOARD</a></td>
-    <td width="20%"><a href="mysql.scarponi.php" alt="aa">SCARPONI</a></td>
-    <td width="20%"><a href="mysql.caschi.php" alt="aa">CASCHI</a></td>
-    <td width="20%"><a href="mysql.elimina.php" alt="aa">ELIMINA OGGETTI</a></td>
-    <td width="20%"><a href="mysql.paga.php" alt="aa">PAGA</a></td>
-    <td width="20%"><a href="mysql.logout.php" alt="aa">LOGOUT</a></td>
-  </tr>
- </table>
+<table cellpadding="5" cellspacing="3">
+<tr>
 
-<hr />
+<td width="1%" style="vertical-align: top; background-color: #ffffbf;">
+    <table style="color: black;">
+    <tr><td width="20%"><a href="pagina_iniziale.php" alt="aa">HOME PAGE</a><hr /></td></tr>
+    <tr><td width="20%"><a href="mysql.sci.php" alt="aa">SCI</a><hr /></td></tr>
+    <tr><td width="20%"><a href="mysql.snowboard.php" alt="aa">SNOWBOARD</a><hr /></td></tr>
+    <tr><td width="20%"><a href="mysql.scarponi.php" alt="aa">SCARPONI</a><hr /></td></tr>
+    <tr><td width="20%"><a href="mysql.caschi.php" alt="aa">CASCHI</a><hr /></td></tr>
+    <tr><td width="20%"><a href="mysql.elimina.php" alt="aa">ELIMINA OGGETTI</a><hr /></td></tr>
+    <tr><td width="20%"><a href="mysql.paga.php" alt="aa">PAGA</a><hr /></td></tr>
+    <tr><td width="20%"><a href="mysql.logout.php" alt="aa">LOGOUT</a><hr /></td></tr>
+    </table>
+</td>
 
+<td width="20%" style="vertical-align: top;">
 <h2>IMPORTO DA PAGARE</h2>
 
 <?php
@@ -133,7 +135,11 @@ echo $outputTable;
 <p><input type="submit" name="invioPagamento" value="Procedi con il pagamento"/></p>
 <p><input type="submit" name="invioPagamento" value="Annulla"/></p>
 </form>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />;
+</td>
 
-
+</tr>
+</table>
 </body>
 </html>

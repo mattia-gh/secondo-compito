@@ -32,27 +32,33 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 </head>
 
 <body>
+
+<table cellpadding="5" cellspacing="3">
+<tr>
+<td width="1%" style="vertical-align: top; background-color: #ffffbf;">
+  <table style="color: black;">
+  <tr><td width="20%"><a href="pagina_iniziale.php" alt="aa">HOME PAGE</a><hr /></td></tr>
+  <tr><td width="20%"><a href="mysql.sci.php" alt="aa">SCI</a><hr /></td></tr>
+  <tr><td width="20%"><a href="mysql.snowboard.php" alt="aa">SNOWBOARD</a><hr /></td></tr>
+  <tr><td width="20%"><a href="mysql.scarponi.php" alt="aa">SCARPONI</a><hr /></td></tr>
+  <tr><td width="20%"><a href="mysql.caschi.php" alt="aa">CASCHI</a><hr /></td></tr>
+  <tr><td width="20%"><a href="mysql.elimina.php" alt="aa">ELIMINA OGGETTI</a><hr /></td></tr>
+  <tr><td width="20%"><a href="mysql.paga.php" alt="aa">PAGA</a><hr /></td></tr>
+  <tr><td width="20%"><a href="mysql.logout.php" alt="aa">LOGOUT</a><hr /></td></tr>
+  </table>
+</td>
+
+<td width="20%">
 <table>
 <tr>
-  <td><h1>NOLEGGIO SCI/SNOWBOARD, SCARPONI E CASCHI</h1></td>
- <td width="1%"><img style="float: right;" src="sci.gif" height = "150" width = "150"
+  <td style="text-align: center;"><h1>NOLEGGIO SCI/SNOWBOARD, SCARPONI E CASCHI</h1></td>
+  <td width="1%"><img style="float: right;" src="sci.gif" height = "150" width = "150"
   alt = "sci" /></td>
 </tr>
 </table>
 
 
-<table style="color: black; background: lime;" border="1">
-<tr>
- <td width="20%"><a href="pagina_iniziale.php" alt="aa">HOME PAGE</a></td>
- <td width="20%"><a href="mysql.sci.php" alt="aa">SCI</a></td>
- <td width="20%"><a href="mysql.snowboard.php" alt="aa">SNOWBOARD</a></td>
- <td width="20%"><a href="mysql.scarponi.php" alt="aa">SCARPONI</a></td>
- <td width="20%"><a href="mysql.caschi.php" alt="aa">CASCHI</a></td>
- <td width="20%"><a href="mysql.elimina.php" alt="aa">ELIMINA OGGETTI</a></td>
- <td width="20%"><a href="mysql.paga.php" alt="aa">PAGA</a></td>
- <td width="20%"><a href="mysql.logout.php" alt="aa">LOGOUT</a></td>
-</tr>
-</table>
+
 
 <hr />
 
@@ -65,11 +71,14 @@ Benvenuto <?php echo $_SESSION['userName'];?> !!!
 </p>
 <p style="font-family: Garamond;">
 Questo &egrave; un sito per noleggiare SCI/SNOWBOARD, SCARPONI E CASCHI.<br />
-Nella sezione in verde nella parte superiore sono presenti i collegamenti per riempire il carrello, eliminare gli oggetti dal carrello, pagare o eseguire il logout!
+Nel menu a sinistra sono presenti i collegamenti per riempire il carrello, eliminare gli oggetti dal carrello, pagare o eseguire il logout!
 </p>
 <hr />
-<img style="margin-left: auto; margin-right: auto; display: block" src="sci2.gif" height = "335" width = "500"
+<img style="margin-left: auto; margin-right: auto; display: block" src="sci2.gif" height = "360" width = "550"
  alt = "sci2" />
+</td>
 
+</tr>
+</table>
 </body>
 </html>

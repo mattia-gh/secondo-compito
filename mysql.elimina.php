@@ -20,25 +20,27 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 </head>
 
 <body>
- <table style="color: black; background: lime;" border="1">
-  <tr>
-    <td width="20%"><a href="pagina_iniziale.php" alt="aa">HOME PAGE</a></td>
-    <td width="20%"><a href="mysql.sci.php" alt="aa">SCI</a></td>
-    <td width="20%"><a href="mysql.snowboard.php" alt="aa">SNOWBOARD</a></td>
-    <td width="20%"><a href="mysql.scarponi.php" alt="aa">SCARPONI</a></td>
-    <td width="20%"><a href="mysql.caschi.php" alt="aa">CASCHI</a></td>
-    <td width="20%"><a href="mysql.elimina.php" alt="aa">ELIMINA OGGETTI</a></td>
-    <td width="20%"><a href="mysql.paga.php" alt="aa">PAGA</a></td>
-    <td width="20%"><a href="mysql.logout.php" alt="aa">LOGOUT</a></td>
-  </tr>
- </table>
+<table cellpadding="5" cellspacing="3">
+<tr>
 
-<hr />
+<td width="1%" style="vertical-align: top; background-color: #ffffbf;">
+    <table style="color: black; ">
+    <tr><td width="20%"><a href="pagina_iniziale.php" alt="aa">HOME PAGE</a><hr /></td></tr>
+    <tr><td width="20%"><a href="mysql.sci.php" alt="aa">SCI</a><hr /></td></tr>
+    <tr><td width="20%"><a href="mysql.snowboard.php" alt="aa">SNOWBOARD</a><hr /></td></tr>
+    <tr><td width="20%"><a href="mysql.scarponi.php" alt="aa">SCARPONI</a><hr /></td></tr>
+    <tr><td width="20%"><a href="mysql.caschi.php" alt="aa">CASCHI</a><hr /></td></tr>
+    <tr><td width="20%"><a href="mysql.elimina.php" alt="aa">ELIMINA OGGETTI</a><hr /></td></tr>
+    <tr><td width="20%"><a href="mysql.paga.php" alt="aa">PAGA</a><hr /></td></tr>
+    <tr><td width="20%"><a href="mysql.logout.php" alt="aa">LOGOUT</a><hr /></td></tr>
+    </table>
+</td>
 
+<td style="vertical-align: top;" width="20%">
 <h2>Remove Things</h2>
 
 <?php
-if (!$_SESSION['carrello']) {
+if (empty($_SESSION['carrello'])) {
    echo "<p> - carrello vuoto - </p>";
 } else {
    if ( !isset($_POST['eliminandi'])) {
@@ -71,18 +73,27 @@ if (!$_SESSION['carrello']) {
 
      <td>
 	 <?php
+   if(!empty($_SESSION['carrello'])) {
 	      foreach ($_SESSION['carrello'] as $k=>$v) {
             $aux='quantita' .$v;
             if (isset($_SESSION[$aux])) {
               echo "<input type=\"checkbox\" name=\"eliminandi[]\" value=\"$v\" > $v x" .$_SESSION[$aux] ."<br />";
             }
           }
-     ?>
+    }
+    ?>
      </td>
     </tr>
   </table>
 </form>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</td>
 
+</tr>
+</table>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 </body>
 </html>
 

@@ -43,22 +43,25 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 </head>
 
 <body>
- <table style="color: black; background: lime;" border="1">
-  <tr>
-    <td width="20%"><a href="pagina_iniziale.php" alt="aa">HOME PAGE</a></td>
-    <td width="20%"><a href="mysql.sci.php" alt="aa">SCI</a></td>
-    <td width="20%"><a href="mysql.snowboard.php" alt="aa">SNOWBOARD</a></td>
-    <td width="20%"><a href="mysql.scarponi.php" alt="aa">SCARPONI</a></td>
-    <td width="20%"><a href="mysql.caschi.php" alt="aa">CASCHI</a></td>
-    <td width="20%"><a href="mysql.elimina.php" alt="aa">ELIMINA OGGETTI</a></td>
-    <td width="20%"><a href="mysql.paga.php" alt="aa">PAGA</a></td>
-    <td width="20%"><a href="mysql.logout.php" alt="aa">LOGOUT</a></td>
-  </tr>
- </table>
 
-<hr />
+<table cellpadding="5" cellspacing="3">
+<tr>
 
-<h2>SCI</h2>
+<td width="1%" style="vertical-align: top; background-color: #ffffbf;">
+    <table style="color: black;">
+    <tr><td width="20%"><a href="pagina_iniziale.php" alt="aa">HOME PAGE</a><hr /></td></tr>
+    <tr><td width="20%"><a href="mysql.sci.php" alt="aa">SCI</a><hr /></td></tr>
+    <tr><td width="20%"><a href="mysql.snowboard.php" alt="aa">SNOWBOARD</a><hr /></td></tr>
+    <tr><td width="20%"><a href="mysql.scarponi.php" alt="aa">SCARPONI</a><hr /></td></tr>
+    <tr><td width="20%"><a href="mysql.caschi.php" alt="aa">CASCHI</a><hr /></td></tr>
+    <tr><td width="20%"><a href="mysql.elimina.php" alt="aa">ELIMINA OGGETTI</a><hr /></td></tr>
+    <tr><td width="20%"><a href="mysql.paga.php" alt="aa">PAGA</a><hr /></td></tr>
+    <tr><td width="20%"><a href="mysql.logout.php" alt="aa">LOGOUT</a><hr /></td></tr>
+    </table>
+</td>
+
+<td width="20%" style="vertical-align:top;">
+<h2>CASCHI</h2>
 <p><?php echo $_SESSION['userName']?>, scegli pure i caschi che vuoi:</p>
 
 <form action="<?php $_SERVER['PHP_SELF']?>"  method="post" >
@@ -147,9 +150,15 @@ if ((!isset($_SESSION['carrello']) && !$_POST) || isset($_POST['azzeraAcquisti']
     echo "<li>[$k] $v" ." x" .$_SESSION[$aux] ."</li>";
   }
   echo "</ul>";
-  print_r($_SESSION);
+  //print_r($_SESSION);
+  echo "<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />";
 }
 ?>
+</td>
+
+</tr>
+</table>
 
 </body>
 </html>

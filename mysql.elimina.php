@@ -92,8 +92,7 @@ if (empty($_SESSION['carrello'])) {
 
 </tr>
 </table>
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
 </body>
 </html>
 
